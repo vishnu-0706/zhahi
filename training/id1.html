@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ID2</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background: #f0f2f5;
+        display: flex;
+        flex-direction: column;
+        height: 200vh;
+        margin: 0;
+    }
+
+    .front {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .back {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card {
+        position: relative;
+        width: 300px;
+        height: 450px;
+        background: rgb(17, 14, 14);
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .top {
+        width: 100%;
+        height: 27px;
+        background-color: black;
+    }
+
+    .name {
+        width: 100%;
+        height: 180px;
+        background-color: aliceblue;
+    }
+
+    .clg {
+        width: 100%;
+        height: 100px;
+        background-color: aliceblue;
+    }
+
+    .clg img {
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        object-fit: contain;
+    }
+
+    .address {
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 0.5em;
+        line-height: 1.6;
+        color: #000;
+    }
+
+    .address p {
+        font-weight: bold;
+        margin: -4px 0;
+    }
+
+    .bor {
+        width: 100%;
+        height: 18px;
+        background-color: lightskyblue;
+    }
+
+    .photo-section {
+        position: relative;
+        top: -72px;
+        display: flex;
+        align-items: center;
+        padding: 14px 16px;
+        gap: 16px;
+    }
+
+    .photo {
+        width: 130px;
+        height: 160px;
+        border: 2px solid #2e8b57;
+    }
+
+    .photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .info {
+        flex: 1;
+        color: #000;
+        font-family: Arial, sans-serif;
+    }
+
+    .info .year {
+        position: absolute;
+        top: 65px;
+        color: white;
+        font-weight: bold;
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .info .regno {
+        position: absolute;
+        top: 95px;
+        color: white;
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    .data {
+        width: 100%;
+        position: absolute;
+        top: 71%;
+    }
+
+    .data h4 {
+        color: white;
+        padding-left: 17px;
+    }
+
+    .course {
+        width: 100%;
+        position: absolute;
+        top: 79%;
+    }
+
+    .course h5 {
+        color: white;
+        padding-left: 17px;
+    }
+
+    .signature-section {
+        position: absolute;
+        bottom: 13px;
+        right: 0%;
+        background-color: aliceblue;
+        text-align: center;
+        border-radius: 20px 0 0 0;
+    }
+
+    .signature-section img {
+        width: 80px;
+        border-radius: 20px;
+        height: auto;
+    }
+
+    .signature-section p {
+        margin-top: 2px;
+        font-size: 12px;
+        font-weight: bold;
+        color: rgb(18, 12, 12);
+        font-family: Arial, sans-serif;
+    }
+
+    .bottom {
+        width: 100%;
+        position: absolute;
+        top: 97%;
+        height: 15px;
+        background-color: lightskyblue;
+    }
+
+    .back-con {
+        width: 100%;
+        height: 94%;
+        background-color: white;
+    }
+
+    .back-des {
+        width: 100%;
+        height: 6%;
+    }
+
+    .back-det {
+        width: 100%;
+        height: 55%;
+        background-color: white;
+    }
+
+    td {
+        font-size: smaller;
+    }
+
+    table {
+        padding: 7px 0 0 15px;
+    }
+
+    .back-det p {
+        padding-left: 6%;
+        font-size: smaller;
+        position: absolute;
+        top: 24%;
+    }
+
+    .back-det h5 {
+        padding-left: 6%;
+        position: absolute;
+        top: 27%;
+    }
+
+    .photo-mask {
+        position: absolute;
+        top: 259px;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom,
+                rgba(255, 255, 255, 1),
+                rgba(255, 255, 255, 0.6),
+                rgba(255, 255, 255, 0));
+    }
+
+    .bar {
+        position: absolute;
+        top: 280px;
+        width: 100%;
+        height: 30px;
+    }
+
+    .bar img {
+        width: 100%;
+        height: 100%;
+        padding: 0 10px 0 18px;
+        object-fit: cover;
+    }
+
+    .bar p {
+        position: absolute;
+        top: 72%;
+        left: 27px;
+        letter-spacing: 18px;
+        font-size: xx-small;
+    }
+
+    .college {
+        width: 100%;
+        height: 100px;
+        position: absolute;
+        top: 74%;
+    }
+
+    .college img {
+
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        object-fit: contain;
+    }
+
+    .college p {
+        position: absolute;
+        top: 74%;
+        left: 5%;
+        font-size: xx-small;
+    }
+</style>
+
+<body>
+    <div class="front">
+        <div class="card">
+            <div class="top"></div>
+            <div class="name">
+                <div class="clg">
+                    <img src="../img/mamce-logo.png" alt="">
+                </div>
+                <div class="address">
+                    <p>
+                        Trichy – Chennai Trunk Road,Siruganur,Tiruchirappalli – 621 105,Tamil Nadu, India.
+                    </p>
+
+                    <p>Phone:7305092313, 9952522022, 9952182828
+                    </p>
+
+                    <p>Email:secretary@mamce.org
+                    </p>
+                </div>
+            </div>
+            <div class="bor"></div>
+            <div class="photo-section">
+                <div class="photo">
+                    <img src="../img/me.jpg" alt="Student Photo">
+                </div>
+
+                <div class="info">
+                    <p class="year">2023 - 2027</p>
+                    <p class="regno">812623104147</p>
+                </div>
+            </div>
+            <div class="data">
+                <h4>VISHNUVARATHAN. N</h4>
+            </div>
+            <div class="course">
+                <h5>B.E. CSE</h5>
+            </div>
+            <div class="signature-section">
+                <img src="../img/sign.jfif" alt="">
+                <p>Principal</p>
+            </div>
+            <div class="bottom"></div>
+        </div>
+    </div>
+    <div class="back">
+        <div class="card">
+            <div class="back-des"></div>
+            <div class="back-con">
+                <div class="back-det">
+                    <table>
+                        <tr>
+                            <td>Date Of Birth</td>
+                            <td>: <b>06.06.2006</b></td>
+                        </tr>
+                        <tr>
+                            <td>Blood Group</td>
+                            <td>: <b>O <sup>+ve</sup></b></td>
+                        </tr>
+                        <tr>
+                            <td>Father's Name</td>
+                            <td>: <b>NAGARAJAN. M</b></td>
+                        </tr>
+                        <tr>
+                            <td>Res.Address</td>
+                            <td>:</td>
+                        </tr>
+                    </table>
+                    <p>VISHNUVARATHAN. N</p>
+                    <h5>
+                        No. 1529/14 Kottaikalam Road,<br>
+                        Theni Allinagaram,<br>
+                        Theni District - 625531. <br>
+                        Cell : 8122553483, 9788430322
+                    </h5>
+                </div>
+                <div class="mask">
+                    <img src="../img/clg campus.jpeg" alt="" class="" width="100%">
+                    <div class="photo-mask"></div>
+                </div>
+                <div class="bar">
+                    <img src="../img/bar.jfif" alt="">
+                    <p>812623104147</p>
+                </div>
+                <div class="college">
+                    <img src="../img/mamce-logo.png" alt="">
+                    <p><b>Trichy – Chennai Trunk Road,Siruganur,Tiruchirappalli – 621 105</b></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
