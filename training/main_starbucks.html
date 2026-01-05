@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        height: 1000vh;
+        background-color: #000000;
+    }
+
+    .nav-bar {
+        width: 100%;
+        height: 80px;
+        display: flex;
+        position: sticky;
+        top: 0%;
+        background-color: white;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 40px;
+        border-bottom: 1px solid #e6e6e6;
+        padding: 0 20px;
+    }
+
+    .nav-bar ul {
+        list-style: none;
+        display: flex;
+        gap: 40px;
+    }
+
+    .nav-bar ul li a {
+        text-decoration: none;
+        color: #000000;
+        font-size: 16px;
+        font-weight: 500;
+        font-family: SoDoSans_Light, Helvetica, sans-serif !important;
+    }
+
+    .nav-bar ul li a:active {
+        color: #00754a;
+        border-bottom: 3px solid #00754a;
+    }
+
+    .nav-bar ul li a:hover {
+        color: #00754a;
+    }
+
+    .search-box {
+        display: flex;
+        height: 40px;
+        align-items: center;
+        gap: 10px;
+        border: 1px solid #cccccc;
+        padding: 5px 10px;
+        border-radius: 100px;
+        position: relative;
+        margin-right: 0%;
+        width: 280px;
+    }
+
+    .search-box img {
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        left: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #999;
+    }
+
+    .search-box input {
+        border: none;
+        width: 100%;
+        padding: 10px 16px 10px 40px;
+    }
+
+    .search-box input:focus {
+        height: 40px;
+        width: 280px;
+        border-radius: 100px;
+        outline: none;
+        border: 1px solid #cccccc;
+    }
+
+    .profile {
+        margin-right: 0%;
+    }
+
+    .profile a img {
+        width: 24px;
+        height: 24px;
+    }
+
+
+    .logo {
+        width: 40px;
+        height: 40px;
+        margin-left: 5%;
+    }
+</style>
+
+<body>
+    <div class="nav-bar">
+        <img class="logo" src="../img/starbucks-logo.png" alt="">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="#">Gift</a></li>
+            <li><a href="#">Order</a></li>
+            <li><a href="#">Pay</a></li>
+            <li><a href="#">Store</a></li>
+            <li><a href="#">Corporate Gifting</a></li>
+        </ul>
+        <div class="search-box" id="Home">
+            <img src="../img/search.svg" alt="">
+            <input type="text" placeholder="Looking for something specific?">
+        </div>
+        <div class="profile">
+            <a href=""><img src="../img/account_thin.svg" alt=""></a>
+        </div>
+    </div>
+</body>
+
+</html>

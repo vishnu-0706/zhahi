@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script defer src="./injectScript.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Starbucks Coffee India</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<style>
+  :root {
+    --color-primary: #00754a;
+    --color-primary-dark: #006241;
+    --color-secondary: #1e3932;
+    --color-text: #212529;
+    --color-text-light: #6c757d;
+    --color-white: #ffffff;
+    --font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: var(--font-family);
+    color: var(--color-text);
+    line-height: 1.5;
+    background-color: var(--color-white);
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 7px 16px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: 1px solid transparent;
+    background: none;
+  }
+
+  .btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+  }
+
+  .btn-primary:hover {
+    background-color: var(--color-primary-dark);
+  }
+
+  .btn-outline-white {
+    background-color: transparent;
+    border-color: var(--color-white);
+    color: var(--color-white);
+  }
+
+  .btn-outline-white:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .btn-white {
+    background-color: var(--color-white);
+    color: var(--color-text);
+    padding: 8px 32px;
+  }
+
+  .btn-white:hover {
+    background-color: #f1f1f1;
+  }
+
+  .btn-sm {
+    padding: 6px 16px;
+    font-size: 12px;
+  }
+
+  .section-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--color-secondary);
+    margin-bottom: 24px;
+    padding-left: 10px;
+  }
+
+
+  .nav-bar {
+    width: 100%;
+    height: 75px;
+    display: flex;
+    position: sticky;
+    top: 0%;
+    background-color: white;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 40px;
+    border-bottom: 1px solid #e6e6e6;
+    padding: 0 20px;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  }
+
+  .nav-bar ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+  }
+
+  .nav-bar ul li a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 16px;
+    text-spacing-trim: space-first;
+    font-weight: 500;
+    font-family: SoDoSans_Light, Helvetica, sans-serif !important;
+  }
+
+  .nav-bar ul li a:active {
+    color: #00754a;
+    border-bottom: 3px solid #00754a;
+  }
+
+  .nav-bar ul li a:hover {
+    color: #00754a;
+  }
+
+  .search-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    margin-right: 0%;
+    width: 280px;
+  }
+
+  .search-box img {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+  }
+
+  .search-box input {
+    height: 35px;
+    border: 1px solid #cccccc;
+    border-radius: 100px;
+    width: 100%;
+    padding: 10px 16px 10px 40px;
+    box-shadow: 0 0 2px #00000012, 0 2px 2px #0000000f, 0 1px 3px #0000001a;
+  }
+
+  .search-box input::-webkit-input-placeholder {
+    font-size: 12px;
+    color: #999999;
+    font-family: SoDoSans_Light, Helvetica, sans-serif !important;
+  }
+
+  .search-box input:focus {
+    outline: none;
+    border: 1px solid #312020;
+  }
+
+  input::placeholder:active {
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  .profile {
+    margin-right: 0%;
+  }
+
+  .profile a img {
+    width: 24px;
+    height: 24px;
+  }
+
+
+  .logo {
+    width: 40px;
+    height: 40px;
+    margin-left: 5%;
+  }
+
+  .green-strip {
+    background: #1e3932;
+    margin-top: 3px;
+    color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  }
+
+  .strip-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 0;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  }
+
+  .strip-content h2 {
+    margin-left: 30px;
+    font-weight: lighter;
+    font-family: SoDoSans_Light, Helvetica, sans-serif !important;
+  }
+
+  .strip-content button {
+    margin-right: 0;
+    background: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 8px 16px;
+    border-radius: 20px;
+  }
+
+  a.ancor {
+    width: 100%;
+    height: 100%;
+  }
+
+  .strip-content a {
+    text-decoration: none;
+    color: #fff;
+    padding: 0 21px 0 0;
+    margin-right: -4px;
+    font-family: SoDoSans_Light, Helvetica, sans-serif !important;
+  }
+
+  .hero {
+    padding: 20px 0;
+  }
+
+  .hero-banner {
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+    padding: 15px 20px;
+    border-radius: 4px;
+    margin-bottom: 30px;
+  }
+
+  .hero-text {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+  }
+
+  .hero-text h5 {
+    font-size: 20px;
+    font-weight: 300;
+  }
+
+  .promo-banner {
+    background-image: url("../img/Dashboard Home/image/background.png");
+    background-size: cover;
+    background-position: center;
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+    border-radius: 12px;
+    color: var(--color-white);
+    min-height: 240px;
+  }
+
+  .promo-content {
+    display: flex;
+    align-items: center;
+    padding: 30px 50px;
+    gap: 40px;
+  }
+
+  .promo-image img {
+    height: 180px;
+  }
+
+  .promo-details {
+    flex: 1;
+  }
+
+  .promo-details .tag {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.9;
+  }
+
+  .promo-details h2 {
+    font-size: 28px;
+    margin: 8px 0 12px;
+    font-weight: 600;
+  }
+
+  .promo-details p {
+    font-size: 14px;
+    opacity: 0.9;
+    margin-bottom: 20px;
+    max-width: 500px;
+  }
+
+  .promo-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .handpicked {
+    padding: 40px 0;
+  }
+
+  .categories-grid {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .category-item {
+    cursor: pointer;
+  }
+
+  .category-item:hover .category-img-wrapper img {
+    transform: scale(1);
+  }
+
+  .category-img-wrapper {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 12px;
+    border: 2px solid #edebe9;
+  }
+
+  .category-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: -10;
+    object-fit: cover;
+    transform: scale(1.1);
+    transition: transform -0.05s ease-out;
+  }
+
+  .category-item p {
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--color-text);
+  }
+
+  /* Recommends Section */
+  .recommends {
+    padding: 40px 0;
+    margin-bottom: 30px;
+    background-color: #edebe9;
+  }
+
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+
+  .view-menu {
+    color: var(--color-primary);
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  .products-grid {
+    display: flex;
+    gap: 30px;
+  }
+
+  .product-card {
+    background: var(--color-white);
+    width: 312px;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    transition: box-shadow 0.2s;
+  }
+
+  .product-card:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .product-info {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+
+  .product-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+
+  .product-details h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 4px 0;
+  }
+
+  .veg-icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .product-meta {
+    font-size: 11px;
+    color: var(--color-text-light);
+  }
+
+  .product-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .product-action .price {
+    font-weight: 600;
+    font-size: 15px;
+  }
+
+  .learn-more {
+    padding: 40px 0;
+    background-color: #edebe9;
+    margin-bottom: 150px;
+  }
+
+  .learn-more-card {
+    background-color: var(--color-secondary);
+    border-radius: 12px;
+    color: var(--color-white);
+    min-height: 380px;
+    background-image: url('../img/Dashboard Home/image/ICW_Live_Event_Day5_41f11ca3d2.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .learn-more-content {
+    background: linear-gradient(0deg, rgba(3, 5, 5, 0.9) 0%, rgba(9, 16, 14, 0.7) 50%, transparent 100%);
+    width: 100%;
+    padding-left: 40px;
+    padding-bottom: 30px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    transition: background;
+    transition-duration: 0.5s;
+    transition-delay: 1s;
+    align-items: flex-start;
+    min-height: 380px;
+  }
+
+  .learn-more-content:hover {
+    background: linear-gradient(0deg, rgba(3, 5, 5, 0.95) 0%, rgba(0, 0, 0, 0.85) 50%, rgba(0, 0, 0, 0.1) 100%);
+  }
+
+  .learn-more-content .tag-main {
+    padding-top: 100px;
+  }
+  .tag-wrapper {
+    margin-bottom: 16px;
+  }
+
+  .tag-light {
+    background-color: #e6edeb;
+    color: var(--color-primary);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+
+  .learn-more-content h2 {
+    font-size: 28px;
+    margin-bottom: 12px;
+    font-weight: bolder;
+  }
+
+  .learn-more-content p {
+    margin-bottom: 32px;
+    max-width: 4000px;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .footer {
+    background-color: #0e382c;
+    color: #fff;
+    padding: 60px 40px 30px;
+    margin-bottom: 10px;
+  }
+
+  .footer-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 60px;
+  }
+
+  .footer-col-main {
+    display: flex;
+    gap: 100px;
+    margin-top: 50px;
+
+  }
+
+  .footer-logo {
+    width: 60px;
+    margin-left: 20px;
+  }
+
+  .footer-col h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+
+  .footer-col ul li {
+    margin-bottom: 16px;
+  }
+
+  .footer-col ul li a {
+    font-size: 14px;
+    color: #e0e0e0;
+    transition: color 0.2s;
+  }
+
+  .footer-col ul li a:hover {
+    color: #fff;
+  }
+
+  .social-links {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+
+  .social-links img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .app-links {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .app-links img {
+    height: 40px;
+    width: auto;
+  }
+
+  .footer-row {
+    display: flex;
+    gap: 20px;
+  }
+
+  .footer-row-social {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-bottom {
+    border-top: 1px solid #666;
+    padding-top: 20px;
+  }
+
+  .footer-bottom ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 20px;
+    font-size: 12px;
+  }
+
+  .footer-bottom li {
+    padding-right: 20px;
+    border-right: 1px solid #666;
+  }
+
+  .footer-bottom li:last-child {
+    border-right: none;
+    margin-left: auto;
+  }
+
+  .footer-bottom a {
+    color: #fff;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .footer-bottom a:hover {
+    color: #a0a0a0;
+  }
+
+  .copyright {
+    font-size: 10px;
+    text-align: right;
+  }
+
+
+  .learn-more-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+
+
+  .gift-nav {
+    padding-bottom: 10px;
+    border-bottom: 2px solid #00754a;
+  }
+
+  .design img {
+    width: 60px;
+    height: auto;
+    float: right;
+    margin-top: -39px;
+  }
+</style>
+
+<body>
+  <!-- Header -->
+  <div class="nav-bar">
+    <img class="logo" src="../img/Dashboard Home/icon/starbucks-logo.png" alt="">
+    <ul>
+      <li><a href="starbucks1.html" class="gift-nav">Home</a></li>
+      <li><a href="gift.html">Gift</a></li>
+      <li><a href="order2.html  ">Order</a></li>
+      <li><a href="#">Pay</a></li>
+      <li><a href="#">Store</a></li>
+      <li><a href="#">Corporate Gifting</a></li>
+    </ul>
+    <div class="search-box" id="Home">
+      <img src="../img/Dashboard Home/icon/search.svg" alt="">
+      <input type="text" placeholder="Looking for something specific?">
+    </div>
+    <div class="profile">
+      <a href=""><img src="../img/Dashboard Home/icon/account_thin.svg" alt=""></a>
+    </div>
+  </div>
+  <section class="green-strip">
+    <a href="" class="ancor">
+      <div class="strip-content">
+        <div class="strip-name">
+          <h2>Starbucks</h2>
+        </div>
+        <div class="strip-button">
+          <button><a href="#">Know More</a></button>
+        </div>
+      </div>
+    </a>
+  </section>
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="promo-banner">
+          <div class="promo-content">
+            <div class="promo-image">
+              <img src="../img/ordering/image_23_1_f52bab407d.png" alt="Starbucks Drink">
+            </div>
+            <div class="promo-details">
+              <span class="tag">Starbucks Meets Baileys</span>
+              <h2>Serving Up Merry Magic</h2>
+              <p>Indulge in the rich, creamy taste of our Signature Irish beverages, crafted in your favourite flavours.
+              </p>
+              <div class="promo-actions">
+                <button class="btn btn-primary">Order Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="handpicked">
+      <div class="container">
+        <h2 class="section-title">Handcrafted Curations</h2>
+        <div class="categories-grid">
+          <div class="category-item">
+            <div class="category-img-wrapper">
+              <img src="../img/Dashboard Home/image/Bestseller.webp" alt="Bestseller">
+            </div>
+            <p>Bestseller</p>
+          </div>
+          <div class="category-item">
+            <div class="category-img-wrapper">
+              <img src="../img/Dashboard Home/image/Drinks.webp" alt="Drinks">
+            </div>
+            <p>Drinks</p>
+          </div>
+          <div class="category-item">
+            <div class="category-img-wrapper">
+              <img src="../img/Dashboard Home/image/Food.webp" alt="Food">
+            </div>
+            <p>Food</p>
+          </div>
+          <div class="category-item">
+            <div class="category-img-wrapper">
+              <img src="../img/Dashboard Home/image/Merchandise.webp" alt="Merchandise">
+            </div>
+            <p>Merchandise</p>
+          </div>
+          <div class="category-item">
+            <div class="category-img-wrapper">
+              <img src="../img/Dashboard Home/image/CoffeeAtHome.webp" alt="Coffee At Home">
+            </div>
+            <p>Coffee At Home</p>
+          </div>
+          <div class="category-item">
+            <div class="category-img-wrapper">
+              <img src="../img/Dashboard Home/image/ReadyToEat.webp" alt="Ready to Eat">
+            </div>
+            <p>Ready to Eat</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="recommends">
+      <div class="design">
+        <img src="../img/Dashboard Home/icon/greyleafright.svg" alt="">
+      </div>
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Barista Recommends</h2>
+          <a href="#" class="view-menu">View Menu</a>
+        </div>
+
+        <div class="products-grid">
+          <div class="product-card">
+            <div class="product-info">
+              <img src="../img/Dashboard Home/image/java chip.webp" alt="Java Chip Frappuccino" class="product-img">
+              <div class="product-details">
+                <img src="../img/Dashboard Home/icon/veg.svg" alt="veg" class="veg-icon">
+                <h3>Java Chip Frappuccino</h3>
+                <p class="product-meta">TALL(354 ml) . 392 kcal</p>
+              </div>
+            </div>
+            <div class="product-action">
+              <p class="price">₹ 441.00</p>
+              <button class="btn btn-primary btn-sm">Add Item</button>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-info">
+              <img src="../img/Dashboard Home/image/100419.webp" alt="Caffe Americano" class="product-img">
+              <div class="product-details">
+                <img src="../img/Dashboard Home/icon/veg.svg" alt="veg" class="veg-icon">
+                <h3>Caffe Americano</h3>
+                <p class="product-meta">SHORT(237 ml) . 0 kcal</p>
+              </div>
+            </div>
+            <div class="product-action">
+              <p class="price">₹ 262.50</p>
+              <button class="btn btn-primary btn-sm">Add Item</button>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-info">
+              <img src="https://starbucksstatic.cognizantorderserv.com/Items/Small/webP/105468.webp" alt="Cold Coffee"
+                class="product-img">
+              <div class="product-details">
+                <img src="../img/Dashboard Home/icon/veg.svg" alt="veg" class="veg-icon">
+                <h3>Cold Coffee</h3>
+                <p class="product-meta">TALL(354 ml) . 354 kcal</p>
+              </div>
+            </div>
+            <div class="product-action">
+              <p class="price">₹ 362.25</p>
+              <button class="btn btn-primary btn-sm">Add Item</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="learn-more">
+      <div class="container">
+        <div class="learn-more-header">
+          <h3>Learn more about the world of coffee!</h3>
+          <a href="" class="view-menu">Discover More</a>
+        </div>
+        <div class="learn-more-card">
+          <div class="learn-more-content">
+            <div class="tag-wrapper">
+              <span class="tag-light">Coffee Culture</span>
+            </div>
+            <div class="tag-main">
+              <h2>Art & Science Of Coffee Brewing</h2>
+              <p>Master the perfect brew with Starbucks! Learn the art and science of coffee brewing.</p>
+            </div>
+            <div class="tag-button">
+              <button class="btn btn-white">Learn More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col-main">
+          <div class="footer-col">
+            <img src="https://www.starbucks.in/assets/icon/logo.png" alt="Starbucks" class="footer-logo">
+          </div>
+
+          <div class="footer-col">
+            <h3>About Us</h3>
+            <ul>
+              <li><a href="#">Our Heritage</a></li>
+              <li><a href="#">Our Company</a></li>
+              <li><a href="#">Coffeehouse</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h3>Responsibility</h3>
+            <ul>
+              <li><a href="#">Diversity</a></li>
+              <li><a href="#">Community</a></li>
+              <li><a href="#">Ethical Sourcing</a></li>
+              <li><a href="#">Environmental <br>Stewardship</a></li>
+              <li><a href="#">Learn More</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3>Legal</h3>
+            <ul>
+              <li><a href="#">Disclaimer</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="">FAQs</a></li>
+              <li><a href="">Customer Service</a></li>
+              <li><a href="">Delivery</a></li>
+              <li><a href="">Loyalty Program Terms <br> and Conditions</a></li>
+              <li><a href="">Starbucks India Mobile <br> App Terms of Use</a></li>
+              <li><a href="">Starbucks® Rewards <br> Program</a></li>
+              <li><a href="">Free Tall Bev on Survey</a></li>
+              <li><a href="">Special 30% Off on <br> Beverage</a></li>
+              <li><a href="">20% Off on Classic <br> Combo Offer</a></li>
+              <li><a href="">Early Access Offer T&C</a></li>
+              <li><a href="">Privacy Policy</a></li>
+              <li><a href="">SR Exclusive Beverage</a></li>
+              <li><a href="">Buy any 2 Food Get15% <br> Off</a></li>
+              <li><a href="">Tues Club - 20% Off on <br> Invoice</a></li>
+              <li><a href="">50% off on invoice</a></li>
+              <li><a href="">Festive Candle</a></li>
+              <li><a href="">Holiday Bearista <br> Keychain</a></li>
+              <li><a href="">Canvas Hiking Bag</a></li>
+              <li><a href="">Holiday Bearista Plushie</a></li>
+              <li><a href="">Beverage Subscription</a></li>
+              <li><a href="">Gift With Purchase</a></li>
+              <li><a href="">Cookie Policy</a></li>
+              <li><a href="">Store Names</a></li>
+            </ul>
+          </div>
+        </div>
+
+
+        <div class="footer-row">
+          <div class="footer-row-social">
+            <div class="footer-title">
+              <h3>SOCIAL MEDIA</h3>
+            </div>
+            <div class="social-links">
+              <a href="#"><img src="/img/starbucks/instagram.svg" alt="Instagram"></a>
+              <a href="#"><img src="/img/starbucks/facebook.svg" alt="Facebook"></a>
+              <a href="https://x.com/starbucksindia" target="_blank" ><img src="/img/starbucks/twitter.svg" alt="Twitter"></a>
+            </div>
+          </div>
+
+          <div class="app-links">
+            <a href="#"><img src="/img/starbucks/appstoreiOS.png" alt="App Store"></a>
+            <a href="#"><img src="/img/starbucks/appstoreAndroid.png" alt="Play Store"></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <ul>
+          <li><a href="#">Web Accessibility</a></li>
+          <li><a href="#">Privacy Statement</a></li>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li class="copyright">© 2026 Starbucks Coffee Company. All rights reserved.</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

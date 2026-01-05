@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="../img/ZHAHI-final-LOGO-1-300x91.png" type="image/x-icon">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    nav {
+        height: 70px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: white;
+    }
+
+    nav ul {
+        display: flex;
+        align-items: center;
+    }
+
+    nav ul li {
+        list-style: none;
+        display: inline-block;
+        margin: 0 15px;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: black;
+        font-size: large;
+        font-weight: bolder;
+        transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+        color: green;
+    }
+
+    .container nav img {
+        width: 150px;
+        margin-left: 40px;
+        height: auto;
+    }
+
+    .container nav ul img {
+        width: 40px;
+        margin-right: 50px;
+        height: auto;
+        cursor: pointer;
+    }
+
+    .home {
+        margin: 0;
+        width: 100%;
+        background-color: blue;
+        display: flex;
+    }
+
+    .con {
+        width: 54%;
+        color: white;
+        padding: 40px 45px;
+        box-sizing: border-box;
+    }
+
+    .con h1 {
+        font-size: 33px;
+        font-weight: 800;
+        line-height: 1.2;
+        margin-bottom: 20px;
+    }
+
+    .con p {
+        font-size: 16px;
+
+    }
+
+    .home img {
+        width: 46%;
+        height: 370px;
+    }
+
+    .button {
+        margin-top: 40px;
+    }
+
+    .button a {
+        text-decoration: none;
+        color: white;
+        background-color: rgb(160, 220, 230);
+        padding: 15px 25px;
+        border-radius: 5px;
+        font-size: 16px;
+        font-weight: 600;
+        transition: 0.3s;
+    }
+
+    .button a:hover {
+        background-color: white;
+        color: green;
+    }
+    .work {
+        width: 100%;
+        height: auto;
+        text-align: center;
+        padding: 50px 0;
+        box-sizing: border-box;
+    }
+    .work h2 {
+        font-size: 35px;
+        margin-bottom: 40px;
+    }
+    .recurters {
+        width: 80%;
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .recurters img {
+        width: 100px;
+        height: auto;
+    }
+    .stu-count{
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .stu_count{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        margin: 50px 0;
+        background-color: blue;
+        border-radius: 12px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        width: 1200px;
+    }
+    .main-box {
+    flex: 1;
+    padding: 1.5rem;
+    gap: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 150px;
+}
+    .main-box img {
+        width: 55px;
+    height: 55px;
+    object-fit: contain;
+    }
+    .main-box h2 {
+        font-size: 40px;
+        color: white;
+        margin: 10px 0;
+    }
+    .main-box p {
+        font-size: 18px;
+        color: white;
+    }
+    .service {
+        width: 100%;
+        height: auto;
+        text-align: center;
+        box-sizing: border-box;
+    }
+    .service h2 {
+        font-size: 35px;
+        margin-bottom: 40px;
+    }
+    .vl {
+  border-left: 2px solid rgb(255, 255, 255);
+  height: 150px;
+}
+.demo-img {
+    width: 97%;
+    height: 430px;
+    margin: 25px;
+    background-color: lightgray;
+    border-radius: 12px;
+}
+    .intern {
+        width: 97%;
+        height: auto;
+        border-radius: 10px;
+        margin-left: 15px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+        text-align: center;
+        padding: 50px 0;
+        box-sizing: border-box;
+        background-color: rgb(240, 240, 240);
+        box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    }
+    .intern h1 {
+        font-size: 30px;
+        color: blue;
+    }
+    .intern p {
+        font-size: 18px;
+        color: #666;
+        margin: 30px 0;
+    }
+    .course {
+        width: 90%;
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .box {
+        background-color: white;
+        width: 250px;
+        padding: 20px;
+        box-sizing: border-box;
+        border-radius: 12px;
+       box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+    }
+    .box h2 {
+        font-size: 20px;
+        color: #300bac8a;
+        margin-bottom: 15px;
+    }
+    .box p {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+    .box .button a {
+        padding: 10px 15px;
+        font-size: 16px;
+        font-weight: 600;
+        background-color: blue;
+    }
+    .box .button a:hover {
+        background-color: gray;
+        color: white;
+    }
+    .motive {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+    .motive-box {
+        width: 300px;
+        text-align: center;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    .motive-box img {
+        width: 80px;
+        height: 80px;
+        object-fit: contain;
+    }
+    .motive-box h2 {
+        font-size: 22px;
+        margin: 15px 0;
+    }
+    .motive-box blockquote {
+        font-size: 16px;
+        font-style: italic;
+        color: gray;
+        margin-bottom: 15px;
+    }
+    .motive-box p {
+        font-size: 16px;
+        color: #555;
+    }
+    footer {
+        width: 100%;
+        height: auto;
+        background-color: #046459;
+        color: white;
+        padding: 40px 0 20px 0;
+        box-sizing: border-box;
+    }  
+    .f-main {
+        width: 90%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap:30px;
+        margin-bottom: 50px;
+    }
+    .f-main .info {
+        flex: 1;
+        min-width: 250px;
+        margin-right: 20px;
+    }
+    .f-main .info h1 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    .f-main .info hr {
+        width: 224px;
+        border: 1px solid #555;
+        margin-bottom: 10px;
+    }
+    .f-main .info p {
+        font-size: 16px;
+        margin: 5px 0;
+    }
+    .f-main .links hr{
+        width: 181px;
+        border: 1px solid #555;
+        margin-bottom: 10px;
+    }
+    .f-main .courses hr{
+        width: 126  px;
+        border: 1px solid #555;
+        margin-bottom: 10px;
+    }
+    .f-main .links, .f-main .courses {
+        flex: 1;
+    }  
+    .f-main .links ul, .f-main .courses ul {
+        list-style: none;
+        padding: 0;
+    }
+    .f-main .links ul li, .f-main .courses ul li {
+        margin-bottom: 8px;
+    }
+    .f-main .links ul li a, .f-main .courses ul li a {
+        text-decoration: none;
+        color: white;
+        font-size: 16px;
+        transition: 0.3s;
+    }
+    .f-main .links ul li a:hover, .f-main .courses ul li a:hover {
+        color: green;
+    }   
+    .f-main .contact {
+        flex: 1;
+        min-width: 250px;
+    }
+    .contact{
+        margin-left: 20px;
+    }
+    .f-main .contact div {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    .f-main .contact div img {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+    }
+    .f-main .contact div p {
+        font-size: 16px;
+    }
+    .f-main .contact hr {
+        width: 175px;
+        border: 1px solid #555;
+        margin: 10px 0;
+    }
+    .f-main .contact .workinghrs p {
+        font-size: 16px;
+    }
+    .f-base {
+        width: 90%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid #555;
+        padding-top: 10px;
+        box-sizing: border-box;
+    }
+    .f-base h3 {
+        font-size: 14px;
+    }
+    .f-base ul {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+        padding: 0;
+    }
+    .f-base ul li a {
+        text-decoration: none;
+        color: white;
+        font-size: 14px;
+        transition: 0.3s;
+    }
+    .f-base ul li a:hover {
+        color: green;
+    }
+    #mainhr{
+        width: 235px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <nav>
+            <img src="../img/ZHAHI-final-LOGO-1-300x91.png" alt="Zhahi-Logo">
+            <ul>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">Placements</a></li>
+                <li><a href="#">Contact</a></li>
+                <a href="" target="_blank"><img src="../img/whatsapp1.png" alt="Whatsapp-Logo"></a>
+            </ul>
+        </nav>
+        <div class="home">
+            <div class="con">
+                <p>Be in trend</p>
+                <h1>Boost Up Your Career through Enlightening <span style="color: green;">Education</span> Program</h1>
+                <p>Personalize your education with diverse courses and flexible schedules to align with your goals.
+                    Expand your expertise by exploring a variety of courses across different tech areas. Boost your
+                    career and income by acquiring sought-after software skills. Unleash your full potential through our
+                    comprehensive software courses.</p>
+                <div class="button">
+                    <a href="#">Get Started</a>
+                </div>
+            </div>
+            <img src="../img/home-4.png" alt="">
+        </div>
+    </div>
+    <div class="work">
+        <h2>
+            Where do our students work?
+        </h2>
+        <div class="recurters">
+            <img src="../img/tcs.jpg" alt="">
+            <img src="../img/Acc.png" alt="">
+            <img src="../img/kyle-logo.png" alt="">
+            <img src="../img/Vin.png" alt="">
+            <img src="../img/INKYANKLITE.png" alt="">
+            <img src="../img/smart.jpeg" alt="">
+        </div>
+    </div>
+    <div class="stu-count">
+        <div class="stu_count">
+            <div class="main-box">
+                <img src="../img/teachings.png" alt="">
+                <h2>4000+</h2>
+                <p>Trained Students</p>
+            </div>
+            
+                <div class="vl"></div>
+            <div class="main-box">
+                <img src="../img/business.png" alt="">
+                <h2>150+</h2>
+                <p>Placed Students</p>
+            </div>
+            
+                <div class="vl"></div>
+            <div class="main-box">
+                <img src="../img/team.png" alt="">
+                <h2>50+</h2>
+                <p>Workshops Conducted</p>
+            </div>
+            
+        </div>
+    </div>
+    <div class="service">
+        <h2>Services we provide</h2>
+        <div class="demo-img">
+
+        </div>
+    </div>
+    <div class="intern">
+        <h1 >Join Our Internship Program</h1>
+        <p style="margin-bottom: 20px;">Experience hands-on learning with our exclusive internship programs across various domains. Learn, grow, and build your future with us!</p>
+        <p style="margin-top: 0%; ">🌟 <span style="color: rgb(103, 69, 6); font-weight:700;">Exclusive Offer:</span> <span style="color: skyblue;">The best-performing students in this internship will receive a 30% discount on our upcoming courses!</span></p>
+        <div class="course">
+            <div class="box">
+                <h2>Web Development</h2>
+                <p style="font-size: 15px;">Build interactive websites with modern web technologies in this internship.</p>
+                <div class="button">
+                    <a href="#">Apply Now</a>
+                </div>
+            </div>
+            <div class="box">
+                <h2>UI/UX Design</h2>
+                <p>Design intuitive user interfaces in this UI/UX design internship.</p>
+                <div class="button">
+                    <a href="#">Apply Now</a>
+                </div>
+            </div>
+            <div class="box">
+                <h2>Data Analytics</h2>
+                <p>Analyze data to drive business decisions in this data analytics internship.</p>
+                <div class="button">
+                    <a href="#">Apply Now</a>
+                </div>
+            </div>
+            <div class="box">
+                <h2>AI & ML</h2>
+                <p>Develop intelligent applications using AI & ML in this internship.</p>
+                <div class="button">
+                    <a href="#">Apply Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="motive">
+        <div class="motive-box">
+            <img src="../img/mastery.png" alt="">
+            <h2>Hands-On Training</h2>
+            <blockquote>"Don’t just learn, experience"</blockquote>
+            <p>hands-on approach ensures getting the maximum value from your training beyond theory.</p>
+        </div>
+        <div class="motive-box">
+            <img src="../img/project-management.png" alt="">
+            <h2>Capstone Projects</h2>
+            <blockquote>"Bring your learning to life"</blockquote>
+            <p>Capstone projects provide practical experience by solving real-world problems, showcasing your abilities to employers</p>
+        </div>
+        <div class="motive-box">
+            <img src="../img/promotion.png" alt="">
+            <h2>Placement Support</h2>
+            <blockquote>"get your Dream Job"</blockquote>
+            <p>Personalized career guidance & expert interview prep to help you confidently land your dream job successfully.</p>
+        </div>
+    </div>
+    <footer>
+        <div class="f-main">
+            <div class="info">
+                <h1>Zhahi Tech Training</h1>
+                <hr>
+                <p>Unlock Your Tech Potential By</p>
+                <p>Mastering Today’s Skills at Zhahi.</p>
+            </div>
+            <div class="links">
+                <h1>Quick Links</h1>
+                <hr>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Courses</a></li>
+                    <li><a href="">Placement</a></li>
+                    <li><a href="">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="courses">
+                <h1>Courses</h1>
+                <hr>
+                <ul>
+                    <li><a href="">Mern Stack Web Development With AI</a></li>
+                    <li><a href="">AI & Machine Learning</a></li>
+                    <li><a href="">Data Science</a></li>
+                    <li><a href="">Data Analytics</a></li>
+                    <li><a href="">UI & UX</a></li>
+                    <li><a href="">Digital Marketing With AI</a></li>
+                    <li><a href="">Software Testing</a></li>
+                    <li><a href="">College Project Training</a></li>
+                    <li><a href="">Basic Programming (C, C++, java, python)</a></li>
+                </ul>
+            </div>
+            <div class="contact">
+                <h1>Connect Us</h1>
+                <hr>
+                <div class="address">
+                    <img src="../img/location.png" alt="">
+                    <p>Zhahi Tech Training,<br> bungalowmedu,<br>Theni, Tamil Nadu 625531</p>
+                </div>
+                <div class="cont">
+                    <img src="../img/telephone icon.png" alt="">
+                    <p>+91 81228 11818</p>
+                </div>
+                <div class="mail">
+                    <img src="../img/email icon.png" alt="">
+                    <p>info@zhahi.in</p>
+                </div>
+                <hr id="mainhr">
+                <div class="workinghrs">
+                    <p>Business Hours: 9.30 AM to 8PM</p>
+                </div>
+            </div>
+        </div>
+        <div class="f-base">
+            <h3>© 2025 Zhahi Tech Training. All rights reserved.</h3>
+            <ul>
+                <li><a href="">Terms & Conditions</a></li>
+                <li><a href="">Privacy Policy</a></li>
+                <li><a href="">Refund Policy    </a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Starbucks - Order</title>
+  <link rel="stylesheet" href="order2.css">
+</head>
+<body>
+  <header class="header">
+    <div class="nav-bar">
+    <img class="logo" src="/img/starbucks-logo.png" alt="">
+    <ul>
+      <li><a href="starbucks1.html">Home</a></li>
+      <li><a href="gift.html">Gift</a></li>
+      <li><a href="order2.html" class="gift-nav">Order</a></li>
+      <li><a href="#">Pay</a></li>
+      <li><a href="#">Store</a></li>
+      <li><a href="#">Corporate Gifting</a></li>
+    </ul>
+    <div class="search-box" id="Home">
+      <img src="/img/search.svg" alt="">
+      <input type="text" placeholder="Looking for something specific?">
+    </div>
+    <div class="profile">
+      <a href=""><img src="/img/account_thin.svg" alt=""></a>
+    </div>
+  </div>
+  </header>
+
+  <!-- Breadcrumb -->
+  <div class="breadcrumb">
+    <div class="container">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Order</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Order Options Bar -->
+  <div class="order-options-bar">
+    <div class="container">
+      <div class="order-options-content">
+        <div class="store-info">
+        <img src="../img/ordering/Location icon 3.svg" alt="Location" width="20">
+        <input type="text" class="store-input" placeholder="Select Store" value="The Lakshmi Mills">
+        <div class="delivery-time">
+          <img src="../img/ordering/clock.svg" alt="Clock" width="16">
+          <span>25 mins</span>
+        </div>
+      </div>
+        
+        <div class="order-type-selector">
+          <button class="order-type">
+            <img src="../img/ordering/Dinein.svg" alt="Dine-in">
+            <span>Dine-In</span>
+          </button>
+          <button class="order-type active">
+            <img src="../img/Dashboard Home/icon/homegreen.svg" alt="Takeaway">
+            <span>Takeaway</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Category Tabs -->
+  <section class="category-tabs">
+    <div class="container">
+      <div class="horizontal-tabs">
+        <button class="tab-btn active">Festive Specials</button>
+        <button class="tab-btn">Bestseller</button>
+        <button class="tab-btn">Drinks</button>
+        <button class="tab-btn">Food</button>
+        <button class="tab-btn">Merchandise</button>
+        <button class="tab-btn">Coffee At Home</button>
+        <button class="tab-btn">Ready to Eat</button>
+      </div>
+    </div>
+    
+    <div class="vertical-tabs">
+      <div class="container">
+        <div class="sub-tabs">
+          <button class="sub-tab active">Drinks</button>
+          <button class="sub-tab">Food</button>
+          <button class="sub-tab">Merchandise</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section class="products-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Drinks</h2>
+        <p>Drinks</p>
+      </div>
+      
+      <div class="products-grid">
+        <!-- Product Card 1 -->
+        <div class="product-card">
+          <img src="../img/ordering/117775.webp" alt="Signature Irish Matcha" class="product-image">
+          <div class="product-details">
+            <img src="../img/ordering/veg.svg" alt="Veg" class="veg-icon">
+            <h3>Signature Irish Matcha</h3>
+            <p class="product-size">TALL(TALL (354 ml)) . 282 kcal</p>
+            <p class="product-description">Non-alcoholic Bailey's Irish Cream flavoured milk, topped wi..</p>
+            <div class="product-footer">
+              <span class="price">₹ 414<span class="decimal">.75</span></span>
+              <button class="add-btn">Add Item</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Card 2 -->
+        <div class="product-card out-of-stock">
+          <img src="../img/ordering/117760.webp" alt="Signature Irish Cold Brew" class="product-image">
+          <div class="product-details">
+            <img src="../img/ordering/veg.svg" alt="Veg" class="veg-icon">
+            <h3>Signature Irish Cold Brew</h3>
+            <p class="product-size">SHORT(SHORT (237 ml) ) . 87 kcal</p>
+            <p class="product-description">Bold smooth Cold brew topped with non alcoholic Bailey's Iri..</p>
+            <div class="product-footer">
+              <span class="price">₹ 372<span class="decimal">.75</span></span>
+              <button class="add-btn disabled">Out of Stock</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Card 3 -->
+        <div class="product-card">
+          <img src="../img/ordering/117772.webp" alt="Signature Irish Frappuccino" class="product-image">
+          <div class="product-details">
+            <img src="../img/ordering/veg.svg" alt="Veg" class="veg-icon">
+            <h3>Signature Irish Frappuccino</h3>
+            <p class="product-size">TALL(TALL (354 ml) ) . 304 kcal</p>
+            <p class="product-description">Smooth espresso with hint of non alcoholic Bailey's Irish Cr..</p>
+            <div class="product-footer">
+              <span class="price">₹ 504<span class="decimal">.00</span></span>
+              <button class="add-btn">Add Item</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Card 4 -->
+        <div class="product-card">
+          <img src="../img/ordering/117762.webp" alt="Signature Irish Latte" class="product-image">
+          <div class="product-details">
+            <img src="../img/ordering/veg.svg" alt="Veg" class="veg-icon">
+            <h3>Signature Irish Latte</h3>
+            <p class="product-size">SHORT(SHORT (237 ml) ) . 279 kcal</p>
+            <p class="product-description">Starbucks Signature latte paired with non alcoholic Bailey's..</p>
+            <div class="product-footer">
+              <span class="price">₹ 414<span class="decimal">.75</span></span>
+              <button class="add-btn">Add Item</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Card 5 -->
+        <div class="product-card out-of-stock">
+          <img src="../img/ordering/117272.webp" alt="Chocolate Foam Cold Brew" class="product-image">
+          <div class="product-details">
+            <img src="../img/ordering/veg.svg" alt="Veg" class="veg-icon">
+            <h3>Chocolate Foam Cold Brew</h3>
+            <p class="product-size">Chocolate Foam Cold Brew(237ml) . 273 kcal</p>
+            <p class="product-description">Starbucks Signature Cold Brew topped with a delicious chocol..</p>
+            <div class="product-footer">
+              <span class="price">₹ 420<span class="decimal">.00</span></span>
+              <button class="add-btn disabled">Out of Stock</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Card 6 -->
+        <div class="product-card">
+          <img src="../img/ordering/117579.webp" alt="Apple Grapefruit Refresher" class="product-image">
+          <div class="product-details">
+            <img src="../img/ordering/veg.svg" alt="Veg" class="veg-icon">
+            <h3>Apple Grapefruit Refresher</h3>
+            <p class="product-size">SHORT(237 ml) . 84 kcal</p>
+            <p class="product-description">A vibrant fusion of crisp apple and tangy grapefruit flavour..</p>
+            <div class="product-footer">
+              <span class="price">₹ 257<span class="decimal">.25</span></span>
+              <button class="add-btn">Add Item</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Card 7 -->
+        <div class="product-card">
+          <img src="../img/ordering/117583.webp" alt="Cola Float Cold Brew" class="product-image">
+          <div class="product-details">
+            <img src="../img/ordering/veg.svg" alt="Veg" class="veg-icon">
+            <h3>Cola Float Cold Brew</h3>
+            <p class="product-size">SHORT(237 ml) . 459 kcal</p>
+            <p class="product-description">A playful twist on classic indulgence — Signature Starbucks ..</p>
+            <div class="product-footer">
+              <span class="price">₹ 357<span class="decimal">.00</span></span>
+              <button class="add-btn">Add Item</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Card 8 -->
+        <div class="product-card">
+          <img src="../img/ordering/117587.webp" alt="Spiced Classic Coffee" class="product-image">
+          <div class="product-details">
+            <img src="../img/ordering/veg.svg" alt="Veg" class="veg-icon">
+            <h3>Spiced Classic Coffee</h3>
+            <p class="product-size">194 kcal</p>
+            <p class="product-description">the Starbucks Spiced Classic Coffee pairs signature Starbuck..</p>
+            <div class="product-footer">
+              <span class="price">₹ 204<span class="decimal">.75</span></span>
+              <button class="add-btn">Add Item</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Card 9 -->
+        <div class="product-card">
+          <img src="../img/ordering/115790.webp" alt="Tamrind Shikanji Cold brew" class="product-image">
+          <div class="product-details">
+            <img src="../img/ordering/veg.svg" alt="Veg" class="veg-icon">
+            <h3>Tamrind Shikanji Cold brew</h3>
+            <p class="product-size">SHORT(237 ml) . 55 kcal</p>
+            <p class="product-description">A must try fusion —  Starbucks Tamarind Shikanji Cold Brew p..</p>
+            <div class="product-footer">
+              <span class="price">₹ 351<span class="decimal">.75</span></span>
+              <button class="add-btn">Add Item</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Info -->
+  <footer class="footer-info">
+    <div class="container">
+      <div class="info-content">
+        <img src="../img/Dashboard Home/icon/info.png" alt="Info">
+        <p>An average active adult requires 2,000 kcal energy per day, <br> however, calorie needs may vary. <br>
+Unit no. 1 (Zone 1A), Ground Floor, Kathipara Urban Square, <br> Guindy, St. Thomas mount, Chennai, Chennai, 600032 <br>
+FSSAI License No. 12423008001780</p>
+      </div>
+    </div>
+  </footer>
+  </noscript>
+</body>
+</html>

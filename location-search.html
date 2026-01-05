@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+    background-color: rgb(160, 23, 23);
+    }
+    .store-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.delivery-time {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+    color: #fff;
+}
+.store-input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255,255,255,0.5);
+  color: #fff;
+  padding: 5px 0;
+  font-size: 14px;
+  width: 200px;
+}
+.store-input::placeholder {
+  color: rgba(255,255,255,0.7);
+}
+</style>
+<body>
+    <div class="store-info">
+        <img src="https://www.starbucks.in/assets/icon/Location icon 3.svg" alt="Location" width="20">
+        <input type="text" class="store-input" placeholder="Select Store" value="The Lakshmi Mills">
+        <div class="delivery-time">
+          <img src="https://www.starbucks.in/assets/icon/clock.svg" alt="Clock" width="16">
+          <span>25 mins</span>
+        </div>
+      </div>
+</body>
+</html>
